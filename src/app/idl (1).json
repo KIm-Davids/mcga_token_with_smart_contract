@@ -1,0 +1,48 @@
+{
+    "version": "0.1.0",
+    "name": "token_marketplace",
+    "instructions": [
+      {
+        "name": "create",
+        "accounts": [
+          { "name": "fixedSupply", "isMut": true, "isSigner": true },
+          { "name": "user", "isMut": true, "isSigner": true },
+          { "name": "systemProgram", "isMut": false, "isSigner": false },
+          { "name": "mint", "isMut": true, "isSigner": true },
+          { "name": "mintAuthority", "isMut": false, "isSigner": false },
+          { "name": "tokenProgram", "isMut": false, "isSigner": false },
+          { "name": "rent", "isMut": false, "isSigner": false }
+        ],
+        "args": []
+      },
+      {
+        "name": "transaction",
+        "accounts": [
+          { "name": "fromAccount", "isMut": true, "isSigner": false },
+          { "name": "toAccount", "isMut": true, "isSigner": false },
+          { "name": "mint", "isMut": true, "isSigner": false },
+          { "name": "developerAccount", "isMut": true, "isSigner": false },
+          { "name": "tokenHolderAccount", "isMut": true, "isSigner": false },
+          { "name": "user", "isMut": false, "isSigner": true },
+          { "name": "tokenProgram", "isMut": false, "isSigner": false }
+        ],
+        "args": [
+          { "name": "amount", "type": "u64" }
+        ]
+      }
+    ],
+    "accounts": [
+      {
+        "name": "Initialize",
+        "type": {
+          "kind": "struct",
+          "fields": [
+            { "name": "fixedSupply", "type": "i32" }
+          ]
+        }
+      }
+    ],
+    "metadata": {
+      "address": "CL4rojrnJoi2dG8uomeP4qRFC8Jr6KQya59VEbujWPCP"
+    }
+  }
